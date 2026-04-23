@@ -1,7 +1,7 @@
 ---
 name: contract-reviewer-wudi
 display_name: 合同审核-WUDI
-version: 2.9.2
+version: 2.9.3
 description: |
   中文合同审核 Skill - 支持修订痕迹、批注气泡、清洁版生成与多轮迭代管理。覆盖41种合同类型、350+关键条款、229+常见风险、82个法律依据。核心输出为 Word Track Changes（修订痕迹），不接受"只有批注、没有修订"的输出方式。
 license: GPL-3.0
@@ -28,6 +28,23 @@ homepage: https://github.com/wux818738-alt/contract-reviewer-wudi
 6. **批注气泡写入** - Word Comment（补充说明）
 7. **PDF/扫描件 OCR** - Vision/Tesseract 自动转换
 8. **多轮迭代管理** - 版本跟踪、对比、回滚
+
+## 效果展示
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/wux818738-alt/contract-reviewer-wudi/main/images/01_input.png" width="400" alt="合同输入">
+  <img src="https://raw.githubusercontent.com/wux818738-alt/contract-reviewer-wudi/main/images/02_type_detection.png" width="400" alt="类型识别">
+</p>
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/wux818738-alt/contract-reviewer-wudi/main/images/03_risk_scan.png" width="400" alt="风险扫描">
+  <img src="https://raw.githubusercontent.com/wux818738-alt/contract-reviewer-wudi/main/images/04_track_changes.png" width="400" alt="修订痕迹">
+</p>
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/wux818738-alt/contract-reviewer-wudi/main/images/05_comments.png" width="400" alt="批注气泡">
+  <img src="https://raw.githubusercontent.com/wux818738-alt/contract-reviewer-wudi/main/images/06_clean_version.png" width="400" alt="清洁版输出">
+</p>
 
 ## 覆盖范围
 
