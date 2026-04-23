@@ -1,9 +1,9 @@
 ---
 name: contract-reviewer-wudi
 display_name: 合同审核-WUDI
-version: 2.9.3
+version: 2.9.4
 description: |
-  中文合同审核 Skill - 支持修订痕迹、批注气泡、清洁版生成与多轮迭代管理。覆盖41种合同类型、350+关键条款、229+常见风险、82个法律依据。核心输出为 Word Track Changes（修订痕迹），不接受"只有批注、没有修订"的输出方式。
+  中文合同审核 Skill - 支持修订痕迹、批注气泡、清洁版生成与多轮迭代管理。覆盖41种合同类型、350+关键条款、229+常见风险、82个法律依据。核心输出为 Word Track Changes（修订痕迹）。
 license: GPL-3.0
 author: WUDI
 homepage: https://github.com/wux818738-alt/contract-reviewer-wudi
@@ -11,108 +11,125 @@ homepage: https://github.com/wux818738-alt/contract-reviewer-wudi
 
 # 合同审核 WUDI | Contract Reviewer WUDI
 
-> 以 **修订痕迹（Track Changes）** 为核心输出的中文合同审核 Skill。
-> 审核修改直接写入 Word 文档，红删绿增，一目了然。
-
-## ★ 核心输出原则
-
-**修订痕迹优先**。每次审核必须将具体修改建议写入文档修订痕迹；批注仅用于补充说明（法律背景、结构性提示等无法用修订表达的内容）。不接受"只有批注、没有修订"的输出方式。
-
-## 核心能力
-
-1. **合同结构解析** - 提取条款、定义词、交叉引用
-2. **合同类型检测** - 自动识别41种合同类型
-3. **条款智能推荐** - 内置22个专业条款模板
-4. **交叉引用检查** - 检测孤立引用、缺失条款
-5. **修订痕迹生成** - 直接写入 Word Track Changes
-6. **批注气泡写入** - Word Comment（补充说明）
-7. **PDF/扫描件 OCR** - Vision/Tesseract 自动转换
-8. **多轮迭代管理** - 版本跟踪、对比、回滚
-
-## 效果展示
+> 中文合同审核 Skill，专为 OpenClaw / Claude AI 设计的智能合同审查工具。
+> 以 **修订痕迹（Track Changes）** 为核心输出，直接写入 Word 文档，所见即所得。
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/wux818738-alt/contract-reviewer-wudi/main/images/01_input.png" width="400" alt="合同输入">
-  <img src="https://raw.githubusercontent.com/wux818738-alt/contract-reviewer-wudi/main/images/02_type_detection.png" width="400" alt="类型识别">
+  <img src="https://raw.githubusercontent.com/wux818738-alt/contract-reviewer-wudi/main/images/04_track_changes.png" width="600" alt="修订痕迹效果">
 </p>
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/wux818738-alt/contract-reviewer-wudi/main/images/03_risk_scan.png" width="400" alt="风险扫描">
-  <img src="https://raw.githubusercontent.com/wux818738-alt/contract-reviewer-wudi/main/images/04_track_changes.png" width="400" alt="修订痕迹">
-</p>
+## ✨ 核心特性
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/wux818738-alt/contract-reviewer-wudi/main/images/05_comments.png" width="400" alt="批注气泡">
-  <img src="https://raw.githubusercontent.com/wux818738-alt/contract-reviewer-wudi/main/images/06_clean_version.png" width="400" alt="清洁版输出">
-</p>
-
-## 覆盖范围
-
-| 类型 | 数量 |
+| 能力 | 说明 |
 |------|------|
-| 合同类型 | 41 种（买卖、租赁、建设工程、技术服务、劳动、股权、PPP、金融等） |
-| 关键条款 | 350+ 条 |
-| 常见风险 | 229+ 点 |
-| 法律依据 | 82 个（《民法典》合同编为主） |
+| 📝 **修订痕迹** | 审核意见直接写入 Word Track Changes，红绿对比一目了然 |
+| 💬 **批注气泡** | 法律背景说明、结构性提示以 Word Comment 形式呈现 |
+| 📋 **清洁版生成** | 一键生成接受全部修改后的清洁版文档 |
+| 🔄 **多轮迭代** | 支持版本跟踪、差异对比、回滚管理 |
+| 🔍 **交叉引用检查** | 自动检测孤立引用、缺失条款、自引用问题 |
+| 🏷️ **合同类型检测** | 自动识别 41 种合同类型（关键词匹配 + 置信度排序） |
+| 📚 **条款智能推荐** | 内置 22 个专业条款模板，审核时自动匹配替代条款 |
+| 📄 **PDF/扫描件 OCR** | 自动识别 PDF 类型，支持 Vision/Tesseract 转换 |
 
-## 使用方式
+## 📊 覆盖范围
+
+- **41 种合同类型**：买卖、租赁、建设工程、技术服务、劳动合同、股权转让、PPP、金融衍生品等
+- **350+ 关键条款**审核规则
+- **229+ 常见风险**识别点
+- **82 个法律依据**（《民法典》合同编为主）
+
+## 🖼️ 效果展示
+
+### 1. 合同输入
+上传 Word 或 PDF 格式的合同文件即可开始审核。
+
+<p align="center"><img src="https://raw.githubusercontent.com/wux818738-alt/contract-reviewer-wudi/main/images/01_input.png" width="500"></p>
+
+### 2. 合同类型识别
+自动检测合同类型，匹配对应审核规则库。
+
+<p align="center"><img src="https://raw.githubusercontent.com/wux818738-alt/contract-reviewer-wudi/main/images/02_type_detection.png" width="500"></p>
+
+### 3. 风险扫描
+逐条扫描合同条款，识别法律风险并分级标注。
+
+<p align="center"><img src="https://raw.githubusercontent.com/wux818738-alt/contract-reviewer-wudi/main/images/03_risk_scan.png" width="500"></p>
+
+### 4. 修订痕迹（核心输出）★
+审核修改直接写入 Word 修订痕迹，红色删除、绿色新增，对比清晰。
+
+<p align="center"><img src="https://raw.githubusercontent.com/wux818738-alt/contract-reviewer-wudi/main/images/04_track_changes.png" width="600"></p>
+
+### 5. 批注气泡
+无法用修订表达的内容（法律背景、结构性提示）以批注形式呈现。
+
+<p align="center"><img src="https://raw.githubusercontent.com/wux818738-alt/contract-reviewer-wudi/main/images/05_comments.png" width="500"></p>
+
+### 6. 清洁版输出
+一键生成接受全部修改后的干净文档。
+
+<p align="center"><img src="https://raw.githubusercontent.com/wux818738-alt/contract-reviewer-wudi/main/images/06_clean_version.png" width="500"></p>
+
+## 📁 目录结构
+
+```
+contract-reviewer-wudi/
+├── SKILL.md                          # Skill 主文件（AI 审核规则引擎）
+├── LICENSE.md                        # GPL-3.0 许可证
+├── scripts/
+│   ├── contract_parser.py            # 合同结构解析引擎
+│   ├── apply_changes.py              # 修订痕迹与批注写入引擎
+│   ├── generate_clean.py             # 清洁版生成引擎
+│   ├── iteration_manager.py          # 多轮迭代管理引擎
+│   ├── clause_recommender.py         # 条款智能推荐引擎
+│   ├── check_cross_refs.py           # 交叉引用检查
+│   ├── full_pipeline.py              # 完整审核流水线
+│   ├── pdf_ocr.py / vision_ocr.py    # PDF OCR 模块
+│   ├── preflight_check.py            # 预检工具
+│   ├── round_analyzer.py             # 轪次分析
+│   ├── generate_comparison.py        # 对比视图生成
+│   └── config.py                     # 共享配置
+├── references/
+│   ├── clause-library/               # 22 个专业条款模板 (JSON)
+│   ├── contract-types/               # 41 种合同类型定义 (JSON)
+│   ├── review-playbook.md            # 审核操作手册
+│   ├── engine-guide.md               # 引擎使用指南
+│   └── output-spec.md                # 输出规范
+├── agents/
+│   └── openai.yaml                   # Agent 配置示例
+├── tests/
+│   └── test_contract_reviewer.py     # 单元测试
+└── images/                           # 效果截图
+```
+
+## 🚀 安装
 
 ### OpenClaw 用户
-
-```
-openclaw skills install contract-reviewer-wudi
-```
-
-或手动 clone：
 
 ```bash
 git clone https://github.com/wux818738-alt/contract-reviewer-wudi.git ~/.qclaw/skills/contract-reviewer-wudi
 ```
 
-### 触发方式
+重启 OpenClaw Gateway，Skill 会自动加载。
 
-上传 Word/PDF 合同文件，AI 自动：
-1. 识别合同类型 → 匹配审核规则
-2. 逐条扫描 → 识别风险条款
-3. 生成修订 → 写入 Word Track Changes
-4. 添加批注 → 法律背景说明
-5. 输出清洁版 → 接受全部修改
+### ClawHub 用户
 
-### 输出文件
-
-- `{合同名}-修订痕迹版.docx` - 包含所有修订痕迹和批注
-- `{合同名}-清洁版.docx` - 接受全部修改后的干净文档
-
-## 目录结构
-
-```
-contract-reviewer-wudi/
-├── SKILL.md                    # Skill 主文件（本文档）
-├── README.md                   # GitHub 介绍（含效果截图）
-├── scripts/                    # Python 脚本引擎
-│   ├── contract_parser.py      # 合同结构解析
-│   ├── apply_changes.py        # 修订痕迹写入 ★
-│   ├── generate_clean.py       # 清洁版生成
-│   └── full_pipeline.py        # 完整流水线
-├── references/                 # 详细文档
-│   ├── review-playbook.md      # 审核操作手册
-│   ├── engine-guide.md         # 引擎使用指南
-│   ├── clause-library/         # 22 个条款模板
-│   └ contract-types/           # 41 种合同定义
-└── images/                     # 效果截图
+```bash
+clawhub install contract-reviewer-wudi
 ```
 
-## 详细文档
+### 依赖
 
-- **审核操作手册**: `references/review-playbook.md`
-- **引擎使用指南**: `references/engine-guide.md`
-- **输出规范**: `references/output-spec.md`
-- **GitHub 完整介绍**: https://github.com/wux818738-alt/contract-reviewer-wudi
+- Python 3.8+
+- `python-docx`（修订痕迹 / 批注写入）
+- `PyMuPDF` 或 `pdfplumber`（PDF 解析，可选）
+- `Tesseract`（扫描件 OCR，可选）
+- `LibreOffice`（清洁版生成，可选）
 
-## 许可证
+## 📜 许可证
 
-GPL-3.0 © 2026 WUDI
+[GPL-3.0](LICENSE.md) © 2026 WUDI
 
----
+## 🙏 致谢
 
-> 本 Skill 的审核方法论基于法律审核通用实践，属于行业公共知识。
+本 Skill 的审核方法论基于法律审核通用实践，属于行业公共知识。感谢所有法律从业者对本领域的贡献。
