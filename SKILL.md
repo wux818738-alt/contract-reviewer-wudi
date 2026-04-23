@@ -1,7 +1,7 @@
 ---
 name: contract-reviewer-wudi
 display_name: 合同审核-WUDI
-version: 2.9.4
+version: 2.9.5
 description: |
   中文合同审核 Skill - 支持修订痕迹、批注气泡、清洁版生成与多轮迭代管理。覆盖41种合同类型、350+关键条款、229+常见风险、82个法律依据。核心输出为 Word Track Changes（修订痕迹）。
 license: GPL-3.0
@@ -14,9 +14,7 @@ homepage: https://github.com/wux818738-alt/contract-reviewer-wudi
 > 中文合同审核 Skill，专为 OpenClaw / Claude AI 设计的智能合同审查工具。
 > 以 **修订痕迹（Track Changes）** 为核心输出，直接写入 Word 文档，所见即所得。
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/wux818738-alt/contract-reviewer-wudi/main/images/04_track_changes.png" width="600" alt="修订痕迹效果">
-</p>
+![修订痕迹效果](https://raw.githubusercontent.com/wux818738-alt/contract-reviewer-wudi/main/images/04_track_changes.png)
 
 ## ✨ 核心特性
 
@@ -43,32 +41,32 @@ homepage: https://github.com/wux818738-alt/contract-reviewer-wudi
 ### 1. 合同输入
 上传 Word 或 PDF 格式的合同文件即可开始审核。
 
-<p align="center"><img src="https://raw.githubusercontent.com/wux818738-alt/contract-reviewer-wudi/main/images/01_input.png" width="500"></p>
+![合同输入](https://raw.githubusercontent.com/wux818738-alt/contract-reviewer-wudi/main/images/01_input.png)
 
 ### 2. 合同类型识别
 自动检测合同类型，匹配对应审核规则库。
 
-<p align="center"><img src="https://raw.githubusercontent.com/wux818738-alt/contract-reviewer-wudi/main/images/02_type_detection.png" width="500"></p>
+![合同类型识别](https://raw.githubusercontent.com/wux818738-alt/contract-reviewer-wudi/main/images/02_type_detection.png)
 
 ### 3. 风险扫描
 逐条扫描合同条款，识别法律风险并分级标注。
 
-<p align="center"><img src="https://raw.githubusercontent.com/wux818738-alt/contract-reviewer-wudi/main/images/03_risk_scan.png" width="500"></p>
+![风险扫描](https://raw.githubusercontent.com/wux818738-alt/contract-reviewer-wudi/main/images/03_risk_scan.png)
 
 ### 4. 修订痕迹（核心输出）★
 审核修改直接写入 Word 修订痕迹，红色删除、绿色新增，对比清晰。
 
-<p align="center"><img src="https://raw.githubusercontent.com/wux818738-alt/contract-reviewer-wudi/main/images/04_track_changes.png" width="600"></p>
+![修订痕迹](https://raw.githubusercontent.com/wux818738-alt/contract-reviewer-wudi/main/images/04_track_changes.png)
 
 ### 5. 批注气泡
 无法用修订表达的内容（法律背景、结构性提示）以批注形式呈现。
 
-<p align="center"><img src="https://raw.githubusercontent.com/wux818738-alt/contract-reviewer-wudi/main/images/05_comments.png" width="500"></p>
+![批注气泡](https://raw.githubusercontent.com/wux818738-alt/contract-reviewer-wudi/main/images/05_comments.png)
 
 ### 6. 清洁版输出
 一键生成接受全部修改后的干净文档。
 
-<p align="center"><img src="https://raw.githubusercontent.com/wux818738-alt/contract-reviewer-wudi/main/images/06_clean_version.png" width="500"></p>
+![清洁版输出](https://raw.githubusercontent.com/wux818738-alt/contract-reviewer-wudi/main/images/06_clean_version.png)
 
 ## 📁 目录结构
 
@@ -86,7 +84,7 @@ contract-reviewer-wudi/
 │   ├── full_pipeline.py              # 完整审核流水线
 │   ├── pdf_ocr.py / vision_ocr.py    # PDF OCR 模块
 │   ├── preflight_check.py            # 预检工具
-│   ├── round_analyzer.py             # 轪次分析
+│   ├── round_analyzer.py             # 轮次分析
 │   ├── generate_comparison.py        # 对比视图生成
 │   └── config.py                     # 共享配置
 ├── references/
